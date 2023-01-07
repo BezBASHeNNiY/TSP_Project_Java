@@ -1,0 +1,265 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l:::p {comp jButtonCancel::l::130:x, comp jButtonStart::l::130:x, comp jButtonRandom::l::130:x, comp jLabelCount::t:::x, comp jTextFieldCount::l:p:121:p, comp jButton50test::l::130:x, comp buttonShow::l::130:x}, space :p:14:p, par l {comp jLabel1:::::x, comp jScrollPane1:::p::p}, space :::p, par l {comp jLabel2:::::x, comp jScrollPane2:::p::p}, space :::p, comp tabbedPane1:::p:353:p, space ::9:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l {comp tabbedPane1:::::x, seq {par l:::p {comp jLabelCount::l:p::p, comp jLabel1::l:::x, comp jLabel2::l::24:x}, space :::p, par t {seq {comp jTextFieldCount:::p::p, space ::220:x, comp jButton50test:::p::p, space :::p, comp buttonShow:::p::p, space :p:4:p, comp jButtonRandom:::p::p, space :::p, comp jButtonStart:::p::p, space :::p, comp jButtonCancel:::p::p}, comp jScrollPane2::t:::x, comp jScrollPane1::l:::x}}}, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabelCount"
+				"text": "Кількість міст"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonStart"
+				"text": "Розрахувати"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButtonStartActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "jTextFieldCount"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "jTextAreaCity"
+					"columns": 20
+					"rows": 5
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonCancel"
+				"text": "Скасувати"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButtonCancelActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane2"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "jTextAreaTours"
+					"columns": 20
+					"rows": 5
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"text": "Інформація про міста"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"text": "Інформація про ітерації"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButtonRandom"
+				"text": "Випадкові міста"
+				"name": "jButtonRandom"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButtonRandomActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "jButton50test"
+				"text": "50"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton50testActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "panelSettings"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelAlgorithm"
+						"text": "Алгоритм"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 5
+						"y": 5
+						"width": 125
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioButtonAnnealing"
+						"text": "Імітація відпалу"
+						"$buttonGroup": new FormReference( "buttonGroup1" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "annealingButton", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 25
+						"width": 150
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioButtonGenetic"
+						"$buttonGroup": new FormReference( "buttonGroup1" )
+						"text": "Генетичний алгоритм"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "geneticButton", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 45
+						"width": 150
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "radioButtonBranches"
+						"$buttonGroup": new FormReference( "buttonGroup1" )
+						"text": "Мурашиний алгоритм"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "antButton", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 150
+						"height": 19
+						"x": 10
+						"y": 70
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelParametr"
+						"text": "Параметри"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 5
+						"y": 150
+						"width": 90
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "parametrLabel1"
+						"text": "Параметр 1"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 170
+						"width": 175
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "parametrField1"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 185
+						"height": 25
+						"width": 150
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "parametrLabel2"
+						"text": "Параметр 2"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 210
+						"width": 175
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "parametrField2"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 225
+						"height": 25
+						"width": 150
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "parametrLabel3"
+						"text": "Параметр 3"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 175
+						"height": 16
+						"x": 10
+						"y": 250
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "parametrField3"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 150
+						"height": 25
+						"x": 10
+						"y": 265
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "parametrLabel4"
+						"text": "Параметр 4"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 175
+						"height": 16
+						"x": 10
+						"y": 290
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "parametrField4"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 150
+						"height": 25
+						"x": 10
+						"y": 305
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBoxParametr1"
+						"text": "параметрbool"
+						"visible": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 170
+						"y": 185
+						"width": 105
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "branchesButton"
+						"text": "Підготовка задачі "
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "branchesButton", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 180
+						"y": 25
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Налаштування"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "panelDiagram"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "buttonClearResults"
+						"text": "Очистити пул рішень"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "clearResults", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 135
+						"x": 10
+						"y": 15
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "buttonDiagram"
+						"text": "Діаграма рішень"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonDiagram", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 50
+						"width": 135
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Діаграма"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "panelGuide"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textAreaInstructions"
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 5
+						"y": 5
+						"width": 340
+						"height": 410
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Інструкція"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonShow"
+				"text": "Показати задачу"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "showGUI", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 810, 495 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 525 )
+		} )
+	}
+}
